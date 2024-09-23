@@ -1,15 +1,16 @@
 import { LinearGradient } from "expo-linear-gradient";
+import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { TouchableOpacity } from "react-native";
-import { Image, Text, View } from "react-native";
-import Animated, { FadeIn, FadeInDown } from "react-native-reanimated";
+import { Image, Text, TouchableOpacity, View } from "react-native";
+import Animated, { FadeInDown } from "react-native-reanimated";
 import {
 	heightPercentageToDP as hp,
 	widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 
 export default function Index() {
+	const router = useRouter();
 	return (
 		<View className="flex-1 flex justify-end">
 			<StatusBar style="light" />
@@ -42,7 +43,8 @@ export default function Index() {
 				<Animated.View entering={FadeInDown.delay(200).springify()}>
 					<TouchableOpacity
 						style={{ height: hp(7), width: wp(80) }}
-						className="bg-rose-500 flex items-center justify-center mx-auto rounded-full border-[2px] border-neutral-200">
+						className="bg-rose-500 flex items-center justify-center mx-auto rounded-full border-[2px] border-neutral-200"
+						onPress={() => router.push("home")}>
 						<Text
 							style={{ fontSize: hp(3) }}
 							className="text-white font-bold tracking-wide">
