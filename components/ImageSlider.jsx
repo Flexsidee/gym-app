@@ -9,7 +9,6 @@ import {
 export default function ImageSlider() {
 	return (
 		<View>
-			<Text>hi</Text>
 			<Carousel
 				data={sliderImages}
 				loop={true}
@@ -20,7 +19,7 @@ export default function ImageSlider() {
 				firstItem={1}
 				autoplayInterval={4000}
 				itemWidth={wp(100) - 70}
-				slideStyle={{ display: "flex", alignItems: "center" }}
+				// slideStyle={{ display: "flex", alignItems: "center" }}
 			/>
 		</View>
 	);
@@ -28,7 +27,7 @@ export default function ImageSlider() {
 
 const ItemCard = ({ item, index }, parallaxProps) => {
 	return (
-		<View style={{ width: wp(100) }}>
+		<View style={{ width: wp(100) - 70, height: hp(25) }}>
 			<ParallaxImage
 				source={item}
 				containerStyle={{ borderRadius: 30, flex: 1 }}
