@@ -1,19 +1,20 @@
 import { Ionicons } from "@expo/vector-icons";
-import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { Image, SafeAreaView, Text, View } from "react-native";
+import { Image, Platform, SafeAreaView, Text, View } from "react-native";
 import { heightPercentageToDP as hp } from "react-native-responsive-screen";
+import BodyParts from "../components/BodyParts";
 import ImageSlider from "../components/ImageSlider";
 
 export default function Home() {
-	const router = useRouter();
 	return (
-		<SafeAreaView class="flex-1 bg-white flex space-y-5" edges={["top"]}>
+		<SafeAreaView
+			class="flex-1 bg-white flex space-y-5"
+			edges={["top"]}
+			style={{ marginTop: Platform.OS === "android" ? hp(6) : 0 }}>
 			<StatusBar style="dark" />
 
 			{/* punchline and avatar*/}
-			<View className="flex-row justify-betweeen items-center mx-5">
+			<View className="flex-row  justify-between items-center mx-5">
 				<View className="space-y-2">
 					<Text
 						style={{ fontSize: hp(4.5) }}
@@ -42,8 +43,13 @@ export default function Home() {
 			</View>
 
 			{/* Image Slider */}
-			<View>
+			<View className="mt-3 ">
 				<ImageSlider />
+			</View>
+
+			{/* Body part lists */}
+			<View className="mt-5">
+				<BodyParts />
 			</View>
 		</SafeAreaView>
 	);

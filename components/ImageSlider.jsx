@@ -1,10 +1,10 @@
-import { View, Text } from "react-native";
-import Carousel, { ParallaxImage } from "react-native-snap-carousel";
-import { sliderImages } from "../constants";
+import { View } from "react-native";
 import {
 	heightPercentageToDP as hp,
 	widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import Carousel, { ParallaxImage } from "react-native-snap-carousel";
+import { sliderImages } from "../constants";
 
 export default function ImageSlider() {
 	return (
