@@ -43,7 +43,9 @@ export default function Home() {
 			</View>
 
 			{/* Image Slider */}
-			<View className="mt-3 ">{/* <ImageSlider /> */}</View>
+			<View className="mt-3 ">
+				<ImageSlider />
+			</View>
 
 			{/* Body part lists */}
 			<View className="flex mt-5">

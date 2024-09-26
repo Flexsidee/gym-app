@@ -23,7 +23,7 @@ export default function BodyParts() {
 				numColumns={2}
 				keyExtractor={(item) => item.name}
 				showsVerticalScrollIndicator={false}
-				contentContainerStyle={{ paddingTop: 20 }}
+				contentContainerStyle={{ paddingBottom: 50, paddingTop: 20 }}
 				columnWrapperStyle={{ justifyContent: "space-between" }}
 				renderItem={({ item, index }) => (
 					<BodyPartCard router={router} index={index} item={item} />
