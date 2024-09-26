@@ -43,12 +43,10 @@ export default function Home() {
 			</View>
 
 			{/* Image Slider */}
-			<View className="mt-3 ">
-				<ImageSlider />
-			</View>
+			<View className="mt-3 ">{/* <ImageSlider /> */}</View>
 
 			{/* Body part lists */}
-			<View className="mt-5">
+			<View className="flex mt-5">
 				<BodyParts />
 			</View>
 		</SafeAreaView>
